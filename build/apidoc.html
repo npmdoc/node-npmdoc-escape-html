@@ -61,12 +61,134 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.escape-html">module escape-html</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.escape-html.escape-html">
+            function <span class="apidocSignatureSpan"></span>escape-html
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.escape-html.toString">
+            function <span class="apidocSignatureSpan">escape-html.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.escape-html.toString">module escape-html.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.escape-html.toString.toString">
+            function <span class="apidocSignatureSpan">escape-html.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.escape-html" id="apidoc.module.escape-html">module escape-html</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.escape-html.escape-html" id="apidoc.element.escape-html.escape-html">
+        function <span class="apidocSignatureSpan"></span>escape-html
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escapeHtml(string) {
+  var str = &#x27;&#x27; + string;
+  var match = matchHtmlRegExp.exec(str);
+
+  if (!match) {
+    return str;
+  }
+
+  var escape;
+  var html = &#x27;&#x27;;
+  var index = 0;
+  var lastIndex = 0;
+
+  for (index = match.index; index &#x3c; str.length; index++) {
+    switch (str.charCodeAt(index)) {
+      case 34: // &#x22;
+        escape = &#x27;&#x26;quot;&#x27;;
+        break;
+      case 38: // &#x26;
+        escape = &#x27;&#x26;amp;&#x27;;
+        break;
+      case 39: // &#x27;
+        escape = &#x27;&#x26;#39;&#x27;;
+        break;
+      case 60: // &#x3c;
+        escape = &#x27;&#x26;lt;&#x27;;
+        break;
+      case 62: // &#x3e;
+        escape = &#x27;&#x26;gt;&#x27;;
+        break;
+      default:
+        continue;
+    }
+
+    if (lastIndex !== index) {
+      html += str.substring(lastIndex, index);
+    }
+
+    lastIndex = index + 1;
+    html += escape;
+  }
+
+  return lastIndex !== index
+    ? html + str.substring(lastIndex, index)
+    : html;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.escape-html.toString" id="apidoc.element.escape-html.toString">
+        function <span class="apidocSignatureSpan">escape-html.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.escape-html.toString" id="apidoc.module.escape-html.toString">module escape-html.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.escape-html.toString.toString" id="apidoc.element.escape-html.toString.toString">
+        function <span class="apidocSignatureSpan">escape-html.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

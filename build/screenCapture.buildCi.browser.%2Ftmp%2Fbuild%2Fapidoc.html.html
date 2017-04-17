@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/component/escape-html"
-
-    >escape-html (v1.0.3)</a>
+    <a href="https://github.com/component/escape-html">escape-html (v1.0.3)</a>
 </h1>
 <h4>Escape string for use in HTML</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.escape-html">module escape-html</a><ol>
 
@@ -108,7 +101,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function escapeHtml(string) {
-  var str = &#x27;&#x27; + string;
+  var str = '' + string;
   var match = matchHtmlRegExp.exec(str);
 
   if (!match) {
@@ -116,26 +109,26 @@
   }
 
   var escape;
-  var html = &#x27;&#x27;;
+  var html = '';
   var index = 0;
   var lastIndex = 0;
 
-  for (index = match.index; index &#x3c; str.length; index++) {
+  for (index = match.index; index &lt; str.length; index++) {
     switch (str.charCodeAt(index)) {
-      case 34: // &#x22;
-        escape = &#x27;&#x26;quot;&#x27;;
+      case 34: // "
+        escape = '&amp;quot;';
         break;
-      case 38: // &#x26;
-        escape = &#x27;&#x26;amp;&#x27;;
+      case 38: // &amp;
+        escape = '&amp;amp;';
         break;
-      case 39: // &#x27;
-        escape = &#x27;&#x26;#39;&#x27;;
+      case 39: // '
+        escape = '&amp;#39;';
         break;
-      case 60: // &#x3c;
-        escape = &#x27;&#x26;lt;&#x27;;
+      case 60: // &lt;
+        escape = '&amp;lt;';
         break;
-      case 62: // &#x3e;
-        escape = &#x27;&#x26;gt;&#x27;;
+      case 62: // &gt;
+        escape = '&amp;gt;';
         break;
       default:
         continue;
@@ -198,3 +191,4 @@
     ]
 </div>
 </div>
+</body></html>
