@@ -1,4 +1,7 @@
-# api documentation for  [escape-html (v1.0.3)](https://github.com/component/escape-html)  [![npm package](https://img.shields.io/npm/v/npmdoc-escape-html.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-escape-html) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-escape-html.svg)](https://travis-ci.org/npmdoc/node-npmdoc-escape-html)
+# npmdoc-escape-html
+
+#### basic api documentation for  [escape-html (v1.0.3)](https://github.com/component/escape-html)  [![npm package](https://img.shields.io/npm/v/npmdoc-escape-html.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-escape-html) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-escape-html.svg)](https://travis-ci.org/npmdoc/node-npmdoc-escape-html)
+
 #### Escape string for use in HTML
 
 [![NPM](https://nodei.co/npm/escape-html.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/escape-html)
@@ -62,7 +65,8 @@
     "scripts": {
         "bench": "node benchmark/index.js"
     },
-    "version": "1.0.3"
+    "version": "1.0.3",
+    "bin": {}
 }
 ```
 
